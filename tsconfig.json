@@ -30,6 +30,6 @@
     "stripInternal": true
   },
   "exclude": ["node_modules"],
-  "include": ["./ts", "./tests"],
+  "include": ["./ts"],
   "files": ["./hardhat.config.ts"]
 }

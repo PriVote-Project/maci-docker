@@ -1,6 +1,10 @@
 # Use Node.js base image
 FROM node:18
 
+
+# Install pnpm globally
+RUN npm install -g pnpm
+
 # Create app directory
 WORKDIR /usr/src/app
 
@@ -10,6 +14,15 @@ RUN npm install
 
 # Copy your application code
 COPY . .
+
+# Ensure TypeScript is installed globally
+RUN pnpm i
+
+# Build the TypeScript code
+RUN pnpm run build
+
+# Copy contractAddress.json to the build folder
+COPY contractAddresses.json /usr/src/app/build/
 
 # Copy the entrypoint script
 COPY entrypoint.sh /usr/src/app/

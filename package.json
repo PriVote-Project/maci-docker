@@ -92,5 +92,7 @@
     "lines": ">50%",
     "functions": ">50%",
     "statements": ">50%"
-  }
+  },
+  "packageManager": "pnpm@9.0.0"
 }
+
