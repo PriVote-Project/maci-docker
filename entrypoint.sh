@@ -31,4 +31,8 @@ else
 
   # Print success message
   echo "Tally file generated: proofs/tally-file.json"
+
+  # Start the API server after generating the tally file
+  echo "Starting the API server..."
+  node index.js
 fi
